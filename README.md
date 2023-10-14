@@ -30,7 +30,7 @@ $ math convert -l
 # Geometry
 
 Another issue I always run into is remembering the key geometric formulas.
-I would be nice if I could just quickly via every formula from the command line, wouldn't it?
+It would be nice if I could just quickly list every formula from the command line, wouldn't it?
 
 ```
 $ math geomtry -l
