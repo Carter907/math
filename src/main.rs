@@ -1,9 +1,8 @@
 mod subcommands;
 mod math_args;
 
-use clap::{Parser, Subcommand};
+use clap::{Parser, Subcommand, ValueEnum};
 use crate::math_args::MathArgs;
-use crate::subcommands::geometry::formulas::get_all_geometry_formulas;
 
 
 fn main() {
@@ -33,10 +32,10 @@ fn main() {
         },
         Some(Geometry { list }) => {
             if list {
-                use crate::subcommands::geometry::formulas::get_all_geometry_formulas;
+                use crate::subcommands::geometry::formulas::*;
 
-                for (name, formula) in get_all_geometry_formulas().iter() {
-                    println!("{name:<30} {formula:<}");
+                for formula in Formulas::value_variants() {
+                    println!("{}", formula);
                 }
             }
         }
