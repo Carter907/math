@@ -6,6 +6,7 @@ use crate::math_args::MathArgs;
 
 
 fn main() {
+
     let m_args = MathArgs::parse();
 
     use crate::subcommands::MathCommands::*;
@@ -43,5 +44,17 @@ fn main() {
         _ => {
 
         }
+    }
+
+}
+#[cfg(test)]
+pub mod Test {
+    #[test]
+    pub fn testLatex() {
+        // LaTeX math expression
+        let latex = r#"\sqrt{\frac{a^2 + b^2}{c^2}}"#;
+
+
+        katex::render()
     }
 }
