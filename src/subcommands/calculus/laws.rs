@@ -1,4 +1,4 @@
+use clap::Subcommand;
 
-pub enum Laws {
-
-}
+#[derive(Subcommand, Debug)]
+pub enum Laws {}
